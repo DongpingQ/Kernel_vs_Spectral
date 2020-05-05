@@ -1,5 +1,5 @@
-clear; 
-close all;
+clear
+close all
 k = 3;
 n = 100;
 
