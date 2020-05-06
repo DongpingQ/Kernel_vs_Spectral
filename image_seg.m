@@ -24,6 +24,7 @@ init = ceil(nColors*rand(1,n));
 label = knKmeans(ab,init);
 pixel_labels = reshape(label,nrows,ncols);
 
+
 % subplot(2,3,2)
 % imshow(pixel_labels,[]), title('image labeled by cluster index');
 segmented_images = cell(1,nColors);
@@ -38,4 +39,3 @@ for i = 2:2+nColors-1
     subplot(2,3,i)
     imshow(segmented_images{i-1}), title(['objects in cluster ' num2str(i-1)]);
 end
-
