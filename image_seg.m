@@ -5,7 +5,7 @@ clc
 he = imread('peppers.png');
 dwsamp = 8;
 he = he(1:dwsamp:end,1:dwsamp:end,:);
-
+figure
 subplot(3,2,1)
 imshow(he), title('H&E image');
 cform = makecform('srgb2lab');
@@ -25,6 +25,7 @@ init = ceil(nColors*rand(1,n));
 label = knKmeans(ab,init);
 pixel_labels = reshape(label,nrows,ncols);
 
+
 subplot(3,2,2)
 imshow(pixel_labels,[]), title('image labeled by cluster index');
 segmented_images = cell(1,nColors);
@@ -39,3 +40,6 @@ for i = 3:3+nColors-1
     subplot(3,2,i)
     imshow(segmented_images{i-2}), title(['objects in cluster ' num2str(i-2)]);
 end
+
+
+
