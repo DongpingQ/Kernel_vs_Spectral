@@ -2,13 +2,13 @@ function [IDX]=spectral_NJM(X,k)
 % first calculate affinity matrix
 % set the parameters
 n=length(X);
-sigma = 1;
+sigma = 5;
 Aff=zeros(n,n);
 D=zeros(n,n);
 
 for i=1:n   
     for j=i+1:n
-        Aff(i,j) = exp(-(X(i)-X(j))^2/(2*sigma^2));
+        Aff(i,j) = exp(-norm(X(i,:)-X(j,:))^2/(2*sigma^2));
         Aff(j,i) = Aff(i,j);
     end
 end
