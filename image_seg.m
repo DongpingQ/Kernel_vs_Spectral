@@ -10,10 +10,10 @@ subplot(3,2,1)
 imshow(he), title('H&E image');
 cform = makecform('srgb2lab');
 lab_he = applycform(he,cform);
-ab = double(lab_he(:,:,2:3));
+ab = double(lab_he(:,:,1:3));
 nrows = size(ab,1);
 ncols = size(ab,2);
-ab = reshape(ab,nrows*ncols,2);
+ab = reshape(ab,nrows*ncols,3);
 
 % [cluster_idx, cluster_center] = kmeans(ab,nColors,'distance','sqEuclidean', ...
 % 	'Replicates',5);
