@@ -21,7 +21,7 @@ nColors = 4;
 n = size(ab,1);
 
 init = ceil(nColors*rand(1,n));
-    label = spectral_NJM(ab,nColors);
+    label = spectral_NJW(ab,nColors);
 %     [label,D] = spectral_SM(ab,nColors);
 pixel_labels = reshape(label,nrows,ncols);
 

@@ -14,8 +14,9 @@ X = [X1;X2]; % Noisy 2-D circular data set
 k = 2;
 n = length(X);
 init = ceil(k*rand(1,n));
-% label = knKmeans(X,init);
-label = spectral_NJM(X,k);
+%  label = knKmeans(X,init);
+%     label = spectral_SM(X,k);
+    label = spectral_NJW(X,k);
 
 color = 'brgmcyk';
 m = length(color);

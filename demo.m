@@ -26,7 +26,7 @@ end
 axis image
 %% Spectral (Ng,Jordan,Weiss)
 
-label2 = spectral_NJM(X,k);
+label2 = spectral_NJW(X,k);
 
 figure(2)
 for i = 1:c

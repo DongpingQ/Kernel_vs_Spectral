@@ -1,8 +1,8 @@
-function [IDX]=spectral_NJM(X,k)
+function [IDX]=spectral_NJW(X,k)
 % first calculate affinity matrix
 % set the parameters
 n=length(X);
-sigma = 5;
+sigma = 0.36;
 Aff=zeros(n,n);
 D=zeros(n,n);
 
