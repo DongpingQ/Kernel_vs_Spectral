@@ -1,8 +1,10 @@
-function [IDX,D]=spectral_SM(X,k)
+function [IDX,D]=spectral_SM(X,k,sigma)
 % first calculate affinity matrix
 % set the parameters
 n=length(X);
-sigma = 0.36;
+if nargin<3
+    sigma=1;
+end
 Aff=zeros(n,n);
 D=zeros(n,n);
 

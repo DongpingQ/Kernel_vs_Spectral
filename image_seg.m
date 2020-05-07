@@ -15,12 +15,10 @@ ab = double(lab_he(:,:,1:3));
 nrows = size(ab,1);
 ncols = size(ab,2);
 ab = reshape(ab,nrows*ncols,3);
-<<<<<<< HEAD
+
 
 % [cluster_idx, cluster_center] = kmeans(ab,nColors,'distance','sqEuclidean', ...
 % 	'Replicates',5);
-=======
->>>>>>> d439cfc9d295414d8c894fa2ce20055563e9f6c3
 
 nColors = 5;
 n = size(ab,1);

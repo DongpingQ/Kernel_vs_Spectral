@@ -13,11 +13,12 @@ X = [X1;X2]; % Noisy 2-D circular data set
 %% Kernel K-means
 k = 2;
 n = length(X);
+sigma=0.36;
 init = ceil(k*rand(1,n));
-%  label = knKmeans(X,init);
-%     label = spectral_SM(X,k);
-    label = spectral_NJW(X,k);
-
+   
+%       label = spectral_SM(X,k,sigma);
+      label = spectral_NJW(X,k,sigma);
+% label = knKmeans(X,init);
 color = 'brgmcyk';
 m = length(color);
 c = max(label);

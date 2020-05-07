@@ -25,8 +25,8 @@ for i = 1:c
 end
 axis image
 %% Spectral (Ng,Jordan,Weiss)
-
-label2 = spectral_NJW(X,k);
+sigma=0.36;
+label2 = spectral_NJW(X,k,sigma);
 
 figure(2)
 for i = 1:c
@@ -37,7 +37,7 @@ end
 axis image
 
 %% Spectral (Shi and Malik)
-label3=spectral_SM(X,k);
+label3=spectral_SM(X,k,sigma);
 figure(3)
 for i = 1:c
     idx = (label3==i);
