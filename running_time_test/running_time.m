@@ -21,7 +21,7 @@ function time = running_time(downsample, type, nColors)
     if type == 1
         label = knKmeans(ab,init);
     elseif type == 2
-        label = spectral_clustering_NJM(ab,nColors);
+        label = spectral_clustering_NJW(ab,nColors);
     else
         label = kmeans(ab,nColors);
     end

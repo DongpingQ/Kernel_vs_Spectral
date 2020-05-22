@@ -1,4 +1,4 @@
-function label = spectral_clustering_NJM(X, k)
+function label = spectral_clustering_NJW(X, k)
 % first calculate affinity matrix
 % set the parameters
     n = length(X);

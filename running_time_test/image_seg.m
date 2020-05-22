@@ -26,7 +26,7 @@ init = ceil(nColors*rand(1,n));
 
 % label = knKmeans(ab,init);
 % label = kmeans(ab,nColors);
-label = spectral_clustering_NJM(ab,nColors);
+label = spectral_clustering_NJW(ab,nColors);
 pixel_labels = reshape(label,nrows,ncols);
 
 % subplot(2,3,2)
@@ -75,9 +75,9 @@ time_spectr = zeros(num,1);
 for i = 1:num
     nlist(i) = 2^i;
     type = 1;
-    time_kmeans(i) = running_time(8,type,2^i);
+    time_kmeans(i) = running_time(4,type,2^i);
     type = 2;
-    time_spectr(i) = running_time(8,type,2^i);
+    time_spectr(i) = running_time(4,type,2^i);
 end
 
 %% plotting
