@@ -22,11 +22,13 @@ ab = reshape(ab,nrows*ncols,3);
 
 nColors = 5;
 n = size(ab,1);
-sigma=10;
+sigma=30;
+nbh=7;
 init = ceil(nColors*rand(1,n));
 
-%  label = spectral_NJW(ab,nColors,sigma);
-  label = spectral_SM(ab,nColors,sigma);
+%   label = spectral_NJW(ab,nColors,sigma);
+%  label = spectral_SM(ab,nColors,sigma);
+% label=spectral_NJW_self_tuning(ab,nColors,nbh);
 pixel_labels = reshape(label,nrows,ncols);
 
 
@@ -35,9 +37,9 @@ pixel_labels = reshape(label,nrows,ncols);
 segmented_images = cell(1,nColors);
 rgb_label = repmat(pixel_labels,[1 1 3]);
 for k = 1:nColors
-	color = he;
-	color(rgb_label ~= k) = 0;
-	segmented_images{k} = color;
+    color = he;
+    color(rgb_label ~= k) = 0;
+    segmented_images{k} = color;
 end
 
 for i = 2:2+nColors-1

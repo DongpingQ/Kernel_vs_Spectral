@@ -1,4 +1,4 @@
-function [IDX,D]=spectral_SM(X,k,sigma)
+function [IDX,C]=spectral_SM(X,k,sigma)
 % first calculate affinity matrix
 % set the parameters
 n=length(X);
